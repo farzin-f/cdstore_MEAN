@@ -1,0 +1,23 @@
+<h3>{{title}}</h3>
+<hr />
+<div class="card-columns">
+<div *ngFor="let cd of cdList">
+    <div class="card">
+      <img class="card-img-top img-fluid" src="{{cd.img_url}}" alt="Card image cap" height="200" width="200">
+      <div class="card-block">
+        <h4 class="card-title">{{cd.title}}</h4>
+        <p class="card-text">{{cd.artist}}</p>
+        <p class="card-text">{{cd.genre}}</p>
+      </div>
+      <div class="card-footer">
+        <small class="text-muted">Price: {{cd.price | currency:'USD':true}}</small>
+      </div>
+    </div>
+    <!-- <div class="card ">
+      <blockquote class="card-block card-blockquote">
+        {{cdList | slice:0:1 | json}}
+      </blockquote>
+    </div> -->
+  </div>
+
+</div>

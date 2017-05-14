@@ -1,0 +1,35 @@
+<h3>{{title}}</h3>
+<hr />
+<form #addForm="ngForm" (ngSubmit)="addCd(addForm)">
+    <div class="form-group col-4">
+      <label>Title</label>
+      <input type="text" class="form-control" id="formGroupExampleInput"
+        name="title" ngModel placeholder="Title">
+    </div>
+    <div class="form-group col-4">
+      <label>Artist</label>
+      <input type="text" class="form-control" id="formGroupExampleInput2"
+        name='artist' ngModel placeholder="Artist">
+    </div>
+    <div class="form-group col-4">
+      <label>Genre</label>
+      <input type="text" class="form-control" id="formGroupExampleInput"
+      name='genre' ngModel placeholder="Genre">
+    </div>
+    <div class="form-group col-4">
+      <label>Price</label>
+      <input type="text" class="form-control" id="formGroupExampleInput2"
+      name='price' ngModel placeholder="9.99">
+    </div>
+    <div class="form-group col-4">
+      <label>Image URL</label>
+      <input type="text" class="form-control" id="formGroupExampleInput2"
+      name='img_url' ngModel placeholder="URL">
+    </div>
+
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+<!-- <p>
+  {{addForm.value | json}}
+</p> -->

@@ -1,0 +1,18 @@
+<h3>{{title}}</h3>
+<hr />
+<div class="form-group">
+  <label for="exampleInputFile">Upload your resume and cover letter here:</label>
+  <input name='resume' type="file" class="form-control-file" id="InputFile"
+          aria-describedby="fileHelp"
+          [ng-file-select]="options"
+          (onUpload)="handleUpload($event)"
+          multiple>
+  <small id="fileHelp" class="form-text text-muted">You can send multiple files at a time.</small>
+</div>
+
+<div *ngFor="let progressObj of uploadProgresses">
+  <div class="progress">
+    <div class="progress-bar bg-info" role="progressbar" [style.width]="progressObj.percent + '%'" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+  </div>
+  <div class="label">Uploading file ({{ progressObj.percent }}%)</div>
+</div>
